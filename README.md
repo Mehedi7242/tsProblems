@@ -83,5 +83,34 @@ In TypeScript, we can use **Union (`|`)** and **Intersection (`&`)** types.### â
     console.log(obj1);
     
     // In this case, if we declare a type, we also get autocomplete suggestions, which improves the developer experience.
-  
+
+### Explain the difference between any, unknown, and never types in TypeScript.
+-  In TypeScript, we can use the "any" type, which allows us to store anything in a variableâ€”like a string, number,      or object.We also have the "unknown" type. It works similarly to "any". We also have the "never" type.We cant use     never type in varibale of array we can use it inside a function .Which function will return never .
+-  
+  #### Example:
+
+    
+    ```ts
+    // any type
+    const value: any = "afaf";
+    const value1: any = 323;
+    const value2: any = {};
+    
+    if (value1 === "number") {
+      console.log(value1);
+    }
+    console.log(value);
+    
+    //unknown type
+    // It also disables type checking.
+    
+    const val1: unknown = 1;
+    const val2: any = 2;
+    console.log(val2);
+    
+    // never type
+    // We also have the "never" type.
+    const neverVal: never = "name";
+    // This shows an error: Type '"name"' is not assignable to type 'never'.
+
 
