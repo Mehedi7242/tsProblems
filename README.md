@@ -7,3 +7,4 @@
 - What is type inference in TypeScript? Why is it helpful?
 - How does TypeScript help in improving code quality and project maintainability?
 - Provide an example of using union and intersection types in TypeScript.
+

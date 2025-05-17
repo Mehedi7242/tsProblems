@@ -1,7 +1,6 @@
 {
 
 
-// Problem-1
 function formatString (input : string,toUppier?: boolean) : string {
     if(toUppier == true){
         const res : string = input.toUpperCase()
@@ -12,7 +11,7 @@ function formatString (input : string,toUppier?: boolean) : string {
     }
 }
 
-// problem-2
+
 
 type Books = {
     title:string;
@@ -30,7 +29,7 @@ const books = [
 
 
 
-// Problem-3
+
 
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   const result: T[] = [];
@@ -43,10 +42,35 @@ const concatenateArrays = <T>(...arrays: T[][]): T[] => {
 };
 
 
-// problem - 4 ---->
 
 
-// problem-5
+class Vehicle {
+  private make:string;
+  private year:number;
+
+  constructor(Make:string,Year:number,){
+    this.make = Make;
+    this.year = Year;
+  }
+  getInfo(){
+    console.log(`Make: ${this.make}, Year: ${this.year}`)
+  }
+
+}
+class Car extends Vehicle {
+  model:string;
+  constructor(Make:string,Year:number,model:string){
+    super(Make,Year)
+    this.model = model;
+  }
+  getModel(){
+    console.log(`"Model: ${this.model}"`)
+  }
+}
+
+
+
+
 function processValue(value: string | number): number {
     if(typeof value ==="string")
         return value.length
@@ -57,7 +81,7 @@ function processValue(value: string | number): number {
 }
 
 
-// problem-6
+
 interface Product {
   name: string;
   price: number;
@@ -81,7 +105,7 @@ const products = [
 
 
 
-// problem-7
+
 
 enum Day {
   Monday,
@@ -103,7 +127,7 @@ function getDayType(day: Day): string {
 
 
 
-// problem8
+
 async function squareAsync(n: number): Promise<number>{
   return new Promise((resolve, reject)=>{
     setTimeout(() => {
