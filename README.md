@@ -50,3 +50,38 @@ In TypeScript, we can use **Union (`|`)** and **Intersection (`&`)** types.### �
   // ❌ Not valid: missing a1 and a2 from A1
   const intersection3: AandB = { b1: 3, b2: 3 };
 
+
+### How does TypeScript help in improving code quality and project maintainability?
+- Currently, I’m learning TypeScript, and I will share my own opinion. From my experience with JavaScript, when we declare a variable, function, array, object we don’t declare its type, and it’s dynamically typed in JS. But in TS, we have to define its type explicitly. Though I faced problems with the syntax, the advantages are greater than the syntax issues once I became used to it.
+
+  #### Example:
+    
+    ```ts
+    // For example:
+    const name = "Mehedi";
+    
+    // In TypeScript, we can define the type:
+    const nameTS: string = "Mehedi";
+    
+    // We can also declare the type of an array, whether it will be a string or number array:
+    const arr: number[] = [2, 34, 5];
+    
+    // TypeScript shows us errors before running the code because it performs type checking at compile time.
+    
+    type ObjType = {
+      id: number;
+      name: string;
+      age: number;
+    };
+    
+    const obj1: ObjType = {
+      id: 232,
+      name: "Mehedi",
+      age: 23,
+    };
+    
+    console.log(obj1);
+    
+    // In this case, if we declare a type, we also get autocomplete suggestions, which improves the developer experience.
+  
+
